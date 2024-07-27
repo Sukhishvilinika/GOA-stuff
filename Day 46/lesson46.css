@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2b2929;
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgb(19, 18, 18);
+    border-radius: 8px;
+    box-shadow: 0 0 10px red;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #dad8cf;
+}
+
+.description {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #e07c2a;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 16px;
+    color: yellowgreen;
+    background-color: #025a02;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"].btn {
+    width: 100%;
+    background-color: #28a745;
+}
+
+button[type="submit"].btn:hover {
+    background-color: #218838;
+}
+
+.lol {
+    color: #e07c2a;
+}

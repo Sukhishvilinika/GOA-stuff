@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    margin: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Task 2: Flex Direction */
+.task-2 {
+    flex-direction: column;
+}
+
+/* Task 3: Justify Content */
+.task-3 {
+    justify-content: space-around;
+}
+
+.task-3.space-between {
+    justify-content: space-between;
+}
+
+.task-3.center {
+    justify-content: center;
+}
+
+/* Task 4: Align Items */
+.task-4 {
+    align-items: flex-start;
+}
+
+.task-4.flex-end {
+    align-items: flex-end;
+}
+
+.task-4.stretch {
+    align-items: stretch;
+}
+
+/* Task 5: Flex Wrap */
+.task-5 {
+    flex-wrap: nowrap;
+}
+
+.task-5.wrap {
+    flex-wrap: wrap;
+}
+
+.task-5.wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
