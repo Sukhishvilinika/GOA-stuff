@@ -1,0 +1,44 @@
+<head>
+    <title>sssssssssssssssss</title>
+    <style>
+        #hiddenElement {
+            display: none;
+            margin-top: 20px;
+        }
+
+        #photo {
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button id="showButton">Show invisible message</button>
+    <div id="hiddenElement">Hi</div>
+    <p id="toggleParagraph">you better not hover over this text..</p>
+    <img id="photo" src="https://i.pinimg.com/170x/21/06/4c/21064c8984bfbf924408fdf8c0283966.jpg" alt="Placeholder Photo">
+
+    <script>
+        
+        const button = document.getElementById('showButton');
+        const hiddenElement = document.getElementById('hiddenElement');
+
+        button.addEventListener('click', () => {
+            if (hiddenElement.style.display === 'none') {
+                hiddenElement.style.display = 'block';} else {
+                hiddenElement.style.display = 'none';
+            }
+        });
+         
+         const paragraph = document.getElementById('toggleParagraph');
+        const photo = document.getElementById('photo');
+
+        paragraph.addEventListener('mouseover', () => {
+            photo.style.display = 'block';
+        });
+
+        paragraph.addEventListener('mouseout', () => {
+            photo.style.display = 'none';
+        });
+    </script>
+</body>
