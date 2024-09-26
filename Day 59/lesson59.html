@@ -1,0 +1,32 @@
+<head>
+    <title></title>
+    <script>
+        function checkform(event) { //აქ ვქმნი ფუნქციას რომლითაც შესაძლოა იმის შემოწმება თუ არის მთკიანად შევსებული ველი
+            const fullName = document.getElementById('fullName').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            if (fullName === '' || email === '' || password === '') { // აქ ამოწმებს თუ არის შევსებული აქედან ყველა საჭირო ველი
+                alert('Please fill in all fields.'); //თუ არ არის შევსებული, ატყობინებს user-ს               
+            } else {
+                alert('form submitted successfully'); // და თუ არის შევსებული აგზავნის ფორმას ჩვეულებრივ
+                document.getElementById('myForm').submit();
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>register</h1>
+    <form id="myForm" onsubmit="checkform(event)">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

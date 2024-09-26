@@ -1,7 +1,9 @@
-function sumEvenNumbers(maxvalue) {
-  let sum = 0;
-  for (let i = 0; i <= maxvalue; i += 2) sum += i;
-  return sum;
+function manualGetElementById(id) {
+    const elements = document.all;
+
+    for(let i = 0; i < elements.length; i++) {
+        if(elements[i].id === id) {
+            return elements[i];
+        }
+    }
 }
-console.log(sumEvenNumbers());
-console.log(sumEvenNumbers(20));

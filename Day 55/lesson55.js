@@ -21,7 +21,6 @@ resetBtn.addEventListener('click', () => {
     counter.textContent = counterValue;
 });
 
-// User Info Display Functionality
 const submitBtn = document.getElementById('submit');
 const result = document.getElementById('result');
 

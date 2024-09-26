@@ -1,21 +1,21 @@
 const person = {
     name: "John Doe",
-    age: 30,
-    city: "New York"
+    age: 69,
+    city: "Dublin"
   };
   
   const car = {
-    make: "Toyota",
-    model: "Camry",
-    year: 2022
+    make: "Ford",
+    model: "F-3",
+    year: 1950
   };
   
   console.log("Make:", car.make);
   console.log("Model:", car.model);
   console.log("Year:", car.year);
   
-  person.age = 31;
-  person.hobby = "Reading";
+  person.age = 420;
+  person.hobby = "Jacking";
   delete person.city;
   
   const calculator = {

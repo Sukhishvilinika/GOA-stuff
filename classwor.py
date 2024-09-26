@@ -7,8 +7,8 @@ def outliner(integers):
         else:
             odd.append(i)
     if len(even) == 1:
-        return str('the number that is out of place is' + even)
+        return even
     else:
-        return str('the number that is out of place is' + odd)
+        return odd
 
 print(outliner([2, 16, 8, 8, 10, 3]))

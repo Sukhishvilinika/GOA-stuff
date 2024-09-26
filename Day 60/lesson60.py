@@ -10,14 +10,12 @@ def pirveli(s):
         new_s = s[:i + 1] + new_num   
     return new_s
 
-def meore(arr1, arr2):
-    total_diff = 0
-    length = len(arr1)
-    
+def meore(array1, array2):
+    sumofdiff = 0
+    length = len(array1)    
     for i in range(length):
-        diff = arr1[i] - arr2[i]
-        total_diff += diff ** 2
-    
-    return total_diff / length
+        diff = array1[i] - array2[i]
+        sumofdiff += diff ** 2   
+    return sumofdiff / length
 
 print(meore([1, 2, 3], [4, 5, 6]))
