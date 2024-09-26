@@ -20,29 +20,26 @@ def manual_count(lst, element=None):
             else:
                 break
             
-    
-    
 
 
-def manual_min(list=None):  # Default list is None
+def manual_min(list=None):  
     if list == None:
-        list = range(1, 11)  # Default list from 1 to 10
+        list = range(1, 11)  
     min_value = list[0]
     for num in list:
         if num < min_value:
             min_value = num
     return min_value
 
-def manual_max(lst=None):  # Default list is None
+def manual_max(lst=None):  
     if lst == None:
-        lst = list(range(1, 11))  # Default list from 1 to 10
+        lst = list(range(1, 11))  
     max_value = lst[0]
     for num in lst:
         if num > max_value:
             max_value = num
     return max_value
 
-# Test cases
 print(manual_pop([1, 2, 3, 4, 5], ))  
 print(manual_count([5, 5, 5, 5], 5 ))
 print(manual_min()) 

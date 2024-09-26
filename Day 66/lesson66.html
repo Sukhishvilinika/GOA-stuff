@@ -1,0 +1,130 @@
+<head>
+    <title></title>
+    <style>
+        .completed {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <h2>1: Create and Append a New Element</h2>
+    <script>
+        const p = document.createElement('p');
+        p.textContent = 'Hello World';
+        document.body.appendChild(p);
+    </script>
+
+    <h2>2: Clone and Append an Element</h2>
+    <div id="originalDiv">This is an original div.</div>
+    <script>
+        const div = document.getElementById('originalDiv');
+        const clonedDiv = div.cloneNode(true);
+        document.body.appendChild(clonedDiv);
+    </script>
+
+    <h2>3: Remove a Specific Child Element</h2>
+    <ul id="itemList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <script>
+        const ul = document.getElementById('itemList');
+        const liToRemove = ul.querySelector('li:nth-child(2)');
+        ul.removeChild(liToRemove);
+    </script>
+
+    <h2> 4: Replace a Child Element</h2>
+    <h1 id="replaceMe">This will be replaced.</h1>
+    <script>
+        const h1 = document.getElementById('replaceMe');
+        const h2 = document.createElement('h2');
+        h2.textContent = 'This is the new heading!';
+        h1.parentNode.replaceChild(h2, h1);
+    </script>
+
+    <h2> 5: Remove an Element Directly</h2>
+    <p id="removeMe">This paragraph will be removed.</p>
+    <script>
+        const paragraph = document.getElementById('removeMe');
+        paragraph.remove();
+    </script>
+
+    <h2> 6: Append Multiple New Elements</h2>
+    <div id="multipleSpans"></div>
+    <script>
+        const spanDiv = document.getElementById('multipleSpans');
+        for (let i = 0; i < 3; i++) {
+            const span = document.createElement('span');
+            span.textContent = `Span ${i + 1} `;
+            spanDiv.appendChild(span);
+        }
+    </script>
+
+    <h2> 7: Clone an Element with Event Listeners</h2>
+    <button id="originalButton">Click Me!</button>
+    <script>
+        const button = document.getElementById('originalButton');
+        button.onclick = () => alert('Original button clicked!');
+        const clonedButton = button.cloneNode(true);
+        document.body.appendChild(clonedButton);
+    </script>
+
+    <h2> 8: Move an Existing Element to Another Position</h2>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTR3rLYZ-4e9KMVKi1dzJliv03Ins6uMTi_A&s" id="moveMe" alt="Placeholder Image">
+    <div id="newLocation"></div>
+    <script>
+        const img = document.getElementById('moveMe');
+        const newDiv = document.getElementById('newLocation');
+        img.parentNode.removeChild(img);
+        newDiv.appendChild(img);
+    </script>
+
+    <h2> 9: Toggle Visibility of an Element by Adding/Removing</h2>
+    <div id="toggleMessage">This message can be toggled!</div>
+    <button id="toggleButton">Toggle Message</button>
+    <script>
+      const message = document.getElementById('toggleMessage');
+        const toggleButton = document.getElementById('toggleButton');
+        toggleButton.onclick = () => {
+            message.style.display = message.style.display === 'none' ? 'block' : 'none';
+        };
+    </script>
+
+    <h2>Bonus: Task List Manager</h2>
+    <input type="text" id="taskInput" placeholder="Add a new task">
+    <button id="addTaskBtn">Add Task</button>
+    <button id="clearCompletedBtn">Clear Completed</button>
+    <ul id="taskList"></ul>
+    <script>
+        const addTaskBtn = document.getElementById('addTaskBtn');
+        const taskInput = document.getElementById('taskInput');
+        const taskList = document.getElementById('taskList');
+        const clearCompletedBtn = document.getElementById('clearCompletedBtn');
+
+        addTaskBtn.onclick = () => {
+            const taskText = taskInput.value;
+            if (taskText) {
+                const li = document.createElement('li');
+                li.textContent = taskText;
+                li.onclick = () => li.classList.toggle('completed');
+
+                const removeBtn = document.createElement('button');
+                removeBtn.textContent = 'Remove';
+                removeBtn.onclick = (e) => {
+                    e.stopPropagation();
+                    taskList.removeChild(li);
+                };
+
+                li.appendChild(removeBtn);
+                taskList.appendChild(li);
+                taskInput.value = '';
+            }
+        };
+
+        clearCompletedBtn.onclick = () => {
+            const completedTasks = document.querySelectorAll('.completed');
+            completedTasks.forEach(task => taskList.removeChild(task));
+        };
+    </script>
+</body>
